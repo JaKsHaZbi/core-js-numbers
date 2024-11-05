@@ -307,9 +307,9 @@ function getSumOfDigits(num) {
  *   16  => true
  *   15  => false
  */
+// https://stackoverflow.com/questions/30924280/what-is-the-best-way-to-determine-if-a-given-number-is-a-power-of-two
+// return Math.log2(num) % 1 === 0;
 function isPowerOfTwo(num) {
-  // https://stackoverflow.com/questions/30924280/what-is-the-best-way-to-determine-if-a-given-number-is-a-power-of-two
-  // return Math.log2(num) % 1 === 0;
   return Number.isInteger(Math.log2(num));
 }
 
@@ -584,9 +584,9 @@ function getMaxNumber(firstNumber, secondNumber) {
  * -5, 0 => -5 | -4 | -3 | -2 | -1 | 0
  * -1, 1 => -1 | 0 | 1
  */
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomInteger(min, max) {
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-  return Math.floor(Math.random() * (max - min)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /**
